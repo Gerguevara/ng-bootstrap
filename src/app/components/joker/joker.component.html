@@ -1,0 +1,35 @@
+<!-- <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" [closeOthers]=true> -->
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" [closeOthers]=true>
+  <ngb-panel title="Simple" id="pane1">
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel id="pane2">
+    <ng-template ngbPanelTitle >
+      <span>&#9733; <b>Fancy</b> title &#9733;</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Disabled" [disabled]="false" id="pane3">
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+<div class="row d-flex justify-content-center mt-5">
+  <div class="btn btn-primary" (click)="acc.toggle('pane1')"> Panel 1</div>
+  <div class="btn btn-primary ml-1" (click)="acc.toggle('pane2')"> Panel 2</div>
+  <div class="btn btn-primary ml-2" (click)="acc.toggle('pane3')"> Panel 3</div>
+  <div class="btn btn-primary ml-2" (click)="acc.expandAll()">Open All</div>
+  <div class="btn btn-primary ml-2" (click)="acc.collapseAll()"> Close All</div>
+</div>

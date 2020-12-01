@@ -4,12 +4,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// ng bootstrap
+
+// componets
+import { JokerComponent } from './components/joker/joker.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JokerComponent
   ],
   imports: [
     BrowserModule,
