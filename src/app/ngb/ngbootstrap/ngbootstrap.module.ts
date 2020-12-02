@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 
-const components = [ NgbAccordionModule];
+const components: any[] = [ NgbAlertModule];
 
 
 @NgModule({

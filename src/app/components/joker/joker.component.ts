@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbAccordionConfig , NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertConfig } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -9,15 +9,29 @@ import { NgbAccordionConfig , NgbPanelChangeEvent } from '@ng-bootstrap/ng-boots
 })
 export class JokerComponent {
 
-  // este componente solo tiene 2 metodos de configuracion
-  constructor(private config: NgbAccordionConfig) {
-   // this.config.closeOthers = true; // cerrar los demas al abrir uno
+
+  constructor(private configAlert: NgbAlertConfig) {
+
+   // configuraciones de alerts
+    configAlert.type = 'success' ;
+    configAlert.dismissible = false;
    }
 
-  noModificar($event: NgbPanelChangeEvent): void {
-    if ($event.panelId === 'pane1') {
-      $event.preventDefault();
+
+
+  // foprma chafa
+  cerrar( alerta: string) {
+    // tslint:disable-next-line: prefer-const
+    let aler = (document.getElementById(alerta)) ? document.getElementById(alerta) : null;
+    if (aler) {
+      aler.style.display = 'none';
     }
- }
+
+
+  }
+
+
 
 }
+
+
