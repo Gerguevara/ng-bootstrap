@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 
 // componets
 import { JokerComponent } from './components/joker/joker.component';
+import { OtherComponent } from './components/other/other.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    JokerComponent
+    JokerComponent,
+    OtherComponent
   ],
   imports: [
     BrowserModule,

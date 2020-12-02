@@ -1,15 +1,5 @@
 <!-- <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" [closeOthers]=true> -->
-  <ngb-alert class="success-color-dark text-white d-flex justify-content-center" [dismissible]="true" id="1">
-    <strong>Success</strong> You did great!.
-  </ngb-alert>
+  <p>You can pass an existing component as content of the modal window. In this case remember to add content component
+    as an <code>entryComponents</code> section of your <code>NgModule</code>.</p>
 
-  <br>
-
-  <ngb-alert class="primary-color-dark text-white d-flex justify-content-center" [dismissible]="true" id="2">
-    <strong>Success</strong> You did great!.
-  </ngb-alert>
-<br>
-
-<ngb-alert class="d-flex justify-content-center" id="3" (close)="cerrar(3)">
-    <strong>Success</strong> You did great!.
-  </ngb-alert>
+    <button class="btn btn-lg btn-outline-primary" (click)="open()">Launch demo modal</button>

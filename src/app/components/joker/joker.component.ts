@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbAlertConfig } from '@ng-bootstrap/ng-bootstrap';
-
+import { OtherComponent } from './../other/other.component';
+import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-joker',
@@ -8,30 +8,27 @@ import { NgbAlertConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./joker.component.scss']
 })
 export class JokerComponent {
+  constructor(private modalService: NgbModal) { }
 
-
-  constructor(private configAlert: NgbAlertConfig) {
-
-   // configuraciones de alerts
-    configAlert.type = 'success' ;
-    configAlert.dismissible = false;
-   }
-
-
-
-  // foprma chafa
-  cerrar( alerta: string) {
-    // tslint:disable-next-line: prefer-const
-    let aler = (document.getElementById(alerta)) ? document.getElementById(alerta) : null;
-    if (aler) {
-      aler.style.display = 'none';
-    }
-
+  open(): void{
+    /** size : sm, ls , xl
+     * centered: true
+     * scrollable : true
+     *
+    */
+    const modalRef = this.modalService.open(OtherComponent, {centered: true});
+    modalRef.componentInstance.name = 'Gerardo';
+    modalRef.result.then((data) => {
+      console.log(data);
+    },
+    (reason) => {
+      console.log(reason);
+    });
+/* espera un promsesa para cuando el modal de cierre, then para close, o dismis para
+un dismis y si es un click afuer entonces es retorna un 0*/
 
   }
 
 
-
 }
-
 
